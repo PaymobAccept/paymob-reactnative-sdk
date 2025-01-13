@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Official Paymob SDK",
   "source": "./src/index.js",
-  "main": "./src/index.js",
-  "module": "./src/index.js",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
   "types": "./src/index.d.ts",
   "files": [
     "src",
@@ -70,10 +70,10 @@
     "prettier": "^3.0.3",
     "react": "18.3.1",
     "react-native": "0.75.4",
-    "react-native-builder-bob": "^0.30.2",
+    "react-native-builder-bob": "^0.35.2",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
-    "typescript": "^5.2.2"
+    "typescript": "^5.7.3"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
@@ -165,7 +165,6 @@
       [
         "typescript",
         {
-          "project": "tsconfig.build.json",
           "esm": true
         }
       ]
@@ -175,5 +174,17 @@
     "type": "module-legacy",
     "languages": "kotlin-swift",
     "version": "0.41.2"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/index.d.ts",
+        "default": "./lib/module/index.js"
+      },
+      "require": {
+        "types": "./src/index.d.ts",
+        "default": "./lib/commonjs/index.js"
+      }
+    }
   }
 }
