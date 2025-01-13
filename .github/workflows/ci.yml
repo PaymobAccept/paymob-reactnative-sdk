@@ -1,4 +1,4 @@
-name: Build and Commit Dist
+name: Create GitHub Release
 
 on:
   push:
@@ -9,45 +9,52 @@ permissions:
   contents: write
 
 jobs:
-  build-and-publish-dist:
+  release:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out source
+      - name: Check out repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # Ensures GITHUB_TOKEN is available for pushing
+          fetch-depth: 0
 
-      - name: Use Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20  # Use a stable LTS version
+          node-version: 20
+          cache: 'yarn'
 
-      - name: Install dependencies (Yarn)
+      - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Build the library
+      - name: Build the project
         run: yarn prepare
 
-      - name: Commit dist folder
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          body: |
+            ## Changes
+            - Automated release via GitHub Actions.
+            - Detailed changelog can be found in the commits.
+
+      - name: Package dist folder
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          zip -r dist.zip ./dist
 
-          git checkout -B dist
-
-          # Updated find command with -mindepth 1
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name 'lib' ! -name 'android' ! -name 'ios' -exec rm -rf {} +
-
-          mv lib/* .
-          rm -rf lib
-
-          git add .
-          git commit -m "chore: update dist" || echo "No changes to commit"
-
-          # Set remote URL with GITHUB_TOKEN for authentication
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-
-          git push origin dist --force
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist.zip
+          asset_name: dist.zip
+          asset_content_type: application/zip
