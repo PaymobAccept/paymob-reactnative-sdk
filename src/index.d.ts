@@ -22,6 +22,8 @@ declare module 'paymob-reactnative' {
     setSaveCardDefault(isEnabled: boolean): void;
     setShowSaveCard(isVisible: boolean): void;
     setShowConfirmationPage(isVisible: boolean): void;
+    setShowTransactionResult(isVisible: boolean): void;
+    setKeyboardHandlingEnabled(isEnabled: boolean): void;
     presentPayVC(clientSecret: string, publicKey: string): void;
     setSdkListener(listener: PaymobListener): void;
     removeSdkListener(): void;

@@ -25,6 +25,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
   private var saveCardDefault: Boolean? = null
   private var showSaveCard: Boolean? = null
   private var showResultsPage: Boolean? = null
+  private var showTransactionResult: Boolean? = null
 
   override fun getName(): String {
     return "PaymobReactnative"
@@ -106,6 +107,20 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
   }
 
   /**
+   * Sets whether the transaction result page is shown in the SDK.
+   *
+   * @param isVisible Boolean to show/hide the transaction result page.
+   */
+  @ReactMethod
+  fun setShowTransactionResult(isVisible: Boolean) {
+    showTransactionResult = isVisible
+  }
+
+  @ReactMethod
+  fun setKeyboardHandlingEnabled(isEnabled: Boolean) {
+  }
+
+  /**
    * Presents the payment view controller with the specified parameters.
    *
    * @param clientSecret The client secret provided by Paymob.
@@ -128,6 +143,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
       saveCardDefault?.let { isSavedCardCheckBoxCheckedByDefault(it) }
       showSaveCard?.let { isAbleToSaveCard(it) }
       showResultsPage?.let { showResultPage(it) }
+      showTransactionResult?.let { showTransactionResult(it) }
     }.build().start()
   }
 

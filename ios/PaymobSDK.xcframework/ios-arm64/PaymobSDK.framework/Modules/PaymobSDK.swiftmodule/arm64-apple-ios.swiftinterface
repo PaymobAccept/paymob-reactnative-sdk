@@ -193,6 +193,8 @@ extension DropDown : UIKit.UITableViewDelegate {
   public var saveCardDefault: Swift.Bool?
   public var showSaveCard: Swift.Bool?
   public var showConfirmationPage: Swift.Bool?
+  public var showTransactionResult: Swift.Bool?
+  public var isKeyboardHandlingEnabled: Swift.Bool?
   @objc deinit
 }
 public struct FPNCountry : Swift.Equatable {

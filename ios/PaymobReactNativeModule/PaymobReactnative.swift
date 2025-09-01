@@ -15,7 +15,9 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
     private var saveCardDefault: Bool? = nil
     private var showSaveCard: Bool? = nil
     private var showConfirmationPage: Bool? = nil
-  
+    private var showTransactionResult: Bool? = nil
+    private var isKeyboardHandlingEnabled: Bool? = nil
+
     // MARK: - React Native Module
     override static func moduleName() -> String {
         return "PaymobReactnative"
@@ -43,7 +45,7 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
     func setButtonBackgroundColor(_ color: UIColor) {
     buttonBackgroundColor =  color
     }
-  
+
     @objc
     func setButtonTextColor(_ color: UIColor) {
          buttonTextColor = color
@@ -58,10 +60,20 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
     func setShowSaveCard(_ isVisible: Bool) {
         showSaveCard = isVisible
     }
-  
+
     @objc
     func setShowConfirmationPage(_ isVisible: Bool) {
       showConfirmationPage = isVisible
+    }
+
+    @objc
+    func setShowTransactionResult(_ isVisible: Bool) {
+      showTransactionResult = isVisible
+    }
+
+    @objc
+    func setKeyboardHandlingEnabled(_ isEnabled: Bool) {
+      isKeyboardHandlingEnabled = isEnabled
     }
 
     @objc
@@ -80,7 +92,7 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
             }
         }
     }
-  
+
   // MARK: - Transaction Status Handling
   func transactionRejected() {
       // Handle transaction rejection
@@ -102,39 +114,47 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
       let params: [String: Any] = ["status": "Pending"]
       emitEvent(eventName: "onTransactionStatus", params: params)
   }
-  
+
     // MARK: - Private Methods
     private func setupPaymobCustomization() {
         if let appIcon = self.appIcon {
             paymob.paymobSDKCustomization.appIcon = appIcon
         }
-        
+
         if let appName = self.appName {
             paymob.paymobSDKCustomization.appName = appName
         }
-        
+
         if let buttonBackgroundColor = self.buttonBackgroundColor {
             paymob.paymobSDKCustomization.buttonBackgroundColor = buttonBackgroundColor
         }
-        
+
         if let buttonTextColor = self.buttonTextColor {
             paymob.paymobSDKCustomization.buttonTextColor = buttonTextColor
         }
-        
+
         if let showSaveCard = self.showSaveCard {
             paymob.paymobSDKCustomization.showSaveCard = showSaveCard
         }
-        
+
         if let saveCardDefault = self.saveCardDefault {
             paymob.paymobSDKCustomization.saveCardDefault = saveCardDefault
         }
-      
-      if let saveCardDefault = self.showConfirmationPage {
+
+      if let showConfirmationPage = self.showConfirmationPage {
         paymob.paymobSDKCustomization.showConfirmationPage = showConfirmationPage
       }
-      
+
+        if let showTransactionResult = self.showTransactionResult {
+            paymob.paymobSDKCustomization.showTransactionResult = showTransactionResult
+        }
+
+        if let isKeyboardHandlingEnabled = self.isKeyboardHandlingEnabled {
+            paymob.paymobSDKCustomization.isKeyboardHandlingEnabled = isKeyboardHandlingEnabled
+        }
+
     }
-  
+
     private func emitEvent(eventName: String, params: [String: Any]) {
         sendEvent(withName: eventName, body: params)
     }
@@ -145,7 +165,7 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             // Get the key window from the window scene
             let rootViewController = windowScene.windows.filter { $0.isKeyWindow }.first?.rootViewController
-            
+
             // Traverse the view controller hierarchy to find the top view controller
             return findTopViewController(for: rootViewController)
         }
@@ -166,5 +186,5 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
         }
         return vc
     }
-   
+
 }

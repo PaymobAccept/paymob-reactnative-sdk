@@ -76,6 +76,20 @@ const Paymob = {
     PaymobReactnative.setShowConfirmationPage(isVisible);
   },
   /**
+   * Sets whether or not the transaction result page is shown.
+   * @param {boolean} isVisible - A boolean to show/hide.
+   */
+  setShowTransactionResult(isVisible) {
+    PaymobReactnative.setShowTransactionResult(isVisible);
+  },
+  /**
+    * Sets whether or not the SDK handles custom keyboard appearance.
+    * @param {boolean} isEnabled - A boolean to enable/disable.
+    */
+  setKeyboardHandlingEnabled(isEnabled) {
+    PaymobReactnative.setKeyboardHandlingEnabled(isEnabled);
+  },
+  /**
    * Presents the payment view controller.
    * @param {string} clientSecret - The client secret.
    * @param {string} publicKey - The public key.
