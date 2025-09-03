@@ -43585,50 +43585,15 @@
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1550,
-      "length": 16,
-      "value": "\"egy-paymob-com\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1586,
-      "length": 17,
-      "value": "\"oman-paymob-com\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1627,
-      "length": 21,
-      "value": "\"pakistan-paymob-com\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1667,
-      "length": 16,
-      "value": "\"uae-paymob-com\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1702,
-      "length": 16,
-      "value": "\"ksa-paymob-com\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 4295,
+      "offset": 2345,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Networking\/APIClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 10999,
+      "offset": 9049,
       "length": 4,
       "value": "true"
     },

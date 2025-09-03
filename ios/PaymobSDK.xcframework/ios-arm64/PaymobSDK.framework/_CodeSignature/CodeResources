@@ -334,7 +334,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		uDpcOS/Fd4Fv3d+ObWuFcI5236E=
+		FaQO7/4ZLnVRE+X51fsA8NB7l6E=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -350,7 +350,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ByoRY5VpMRjQgH0doGdgb4GlCXw=
+		tF/8ist2mnW0oXxVjPdnZmDy0eI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -555,26 +555,6 @@
 		<key>countryCodes.json</key>
 		<data>
 		FUXmjU51atMAwoknCtGeASoDcz0=
-		</data>
-		<key>egy-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>ksa-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>oman-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>pakistan-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>uae-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1150,7 +1130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yBxMkbvHFT8GXwIckxHokMZ+shxldYEzFt1tnb3sUZk=
+			8BOVEDHndcxAXHgvZeshmCiOMZ3Vkt31NPfJSEeGG10=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -1178,7 +1158,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9+4UvM6UREb46qKnoA9H8FbVKW36eVzk9ixLN96Tzvg=
+			pkPr1lDtphxQsENT4o+3kyWGA+AbCFyMSudXNAsz3cc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1536,41 +1516,6 @@
 			<key>hash2</key>
 			<data>
 			ZPEQ8rsMMW6+wxawz0tkgVqgdak/7l4CFEMxXbS53jw=
-			</data>
-		</dict>
-		<key>egy-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>ksa-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>oman-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>pakistan-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>uae-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
 			</data>
 		</dict>
 	</dict>

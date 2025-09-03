@@ -334,7 +334,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		qQvwK2dcro+hrwk3GKNmh9RoVSk=
+		D4g1dCDdNHgWDU5AFwI60U81T6k=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -350,11 +350,11 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mxFX4yaIoniF0jTSeA7mIt+lMrk=
+		FAqjuJC9mlxOJkujOUqnIBS0nl0=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		qQvwK2dcro+hrwk3GKNmh9RoVSk=
+		D4g1dCDdNHgWDU5AFwI60U81T6k=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -370,7 +370,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bIY+c1cK+8PJdcezYKmDfFyavKQ=
+		CLD9bW3zpdTuk/PehMqI34aGBxA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -575,26 +575,6 @@
 		<key>countryCodes.json</key>
 		<data>
 		FUXmjU51atMAwoknCtGeASoDcz0=
-		</data>
-		<key>egy-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>ksa-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>oman-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>pakistan-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
-		</data>
-		<key>uae-paymob-com.der</key>
-		<data>
-		M+ToCAcgTCthgqOhS1kazSW18Ns=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1170,7 +1150,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0q7zivIj1W+Jpsb19MR9rIeXkLTwfise6n3VqXAO/1I=
+			VDx8a8akJFAzKn3C1NsOwYZpTDU9/r9Hk+BFE5ViDf0=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1198,14 +1178,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2oC0p1mnUDFXmPCC3YKObp5793EET7yPoU4KnGqJ/yM=
+			DXdIoAg3RcjF+sHsVsv0TT1jUJ6kj/afioQCrY+i1aM=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0q7zivIj1W+Jpsb19MR9rIeXkLTwfise6n3VqXAO/1I=
+			VDx8a8akJFAzKn3C1NsOwYZpTDU9/r9Hk+BFE5ViDf0=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1233,7 +1213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y0Nq5fEeoFzsXQWS+zb0I133lHLteHpr2tjh0kfaJGw=
+			GmgyA8b2sd/iB1v+ErJQ6nFSECDOBA/m9mVuL/6E3mE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1591,41 +1571,6 @@
 			<key>hash2</key>
 			<data>
 			ZPEQ8rsMMW6+wxawz0tkgVqgdak/7l4CFEMxXbS53jw=
-			</data>
-		</dict>
-		<key>egy-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>ksa-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>oman-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>pakistan-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
-			</data>
-		</dict>
-		<key>uae-paymob-com.der</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			f6T/aOwEqZ11KNUIX5SQf00d0cU4G6zcgy7VyWAhRnY=
 			</data>
 		</dict>
 	</dict>
