@@ -140,8 +140,8 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
       appName?.let { setAppName(it) }
       buttonBackgroundColor?.let { setButtonBackgroundColor(it) }
       buttonTextColor?.let { setButtonTextColor(it) }
-      saveCardDefault?.let { isSavedCardCheckBoxCheckedByDefault(it) }
-      showSaveCard?.let { isAbleToSaveCard(it) }
+      saveCardDefault?.let { saveCardByDefault(it) }
+      showSaveCard?.let { showSaveCard(it) }
       showResultsPage?.let { showResultPage(it) }
       showTransactionResult?.let { showTransactionResult(it) }
     }.build().start()
