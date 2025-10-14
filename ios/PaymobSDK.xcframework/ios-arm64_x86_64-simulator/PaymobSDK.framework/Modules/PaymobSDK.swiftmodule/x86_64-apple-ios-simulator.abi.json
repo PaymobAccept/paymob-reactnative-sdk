@@ -44074,14 +44074,14 @@
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Extensions\/StringExtension.swift",
       "kind": "IntegerLiteral",
-      "offset": 538,
+      "offset": 756,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Extensions\/StringExtension.swift",
       "kind": "StringLiteral",
-      "offset": 569,
+      "offset": 787,
       "length": 3,
       "value": "\" \""
     },
@@ -52453,63 +52453,63 @@
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 2925,
+      "offset": 2923,
       "length": 6,
       "value": "\"card\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 3008,
+      "offset": 3006,
       "length": 10,
       "value": "\"e-wallet\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 3173,
+      "offset": 3171,
       "length": 11,
       "value": "\"apple-pay\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4145,
+      "offset": 4143,
       "length": 16,
       "value": "\"integration_id\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4184,
+      "offset": 4182,
       "length": 9,
       "value": "\"is_eKYC\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4245,
+      "offset": 4243,
       "length": 13,
       "value": "\"method_type\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4321,
+      "offset": 4319,
       "length": 21,
       "value": "\"merchant_identifier\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4371,
+      "offset": 4369,
       "length": 15,
       "value": "\"extra_options\""
     },
     {
       "filePath": "\/Users\/mahmoudsaad\/Desktop\/DEV\/SDK-DEV\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4667,
+      "offset": 4665,
       "length": 16,
       "value": "\"integration_id\""
     },
