@@ -97,7 +97,7 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //   implementation fileTree(dir: 'libs', include: ['*.aar'])
-  implementation("com.paymob.sdk:Paymob-SDK:1.6.11")
+  implementation("com.paymob.sdk:Paymob-SDK:1.6.12")
 
 }
 
