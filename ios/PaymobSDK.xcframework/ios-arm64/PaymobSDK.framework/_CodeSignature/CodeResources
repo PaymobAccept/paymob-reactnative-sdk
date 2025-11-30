@@ -334,7 +334,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		vqp60gpK4TVZujMwofheQtDX+KU=
+		AaJGw6DetmduGVyXV8qRVrL3dM8=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -350,7 +350,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		qiUQfEZ719NRBaP5h3RMwUNTjcc=
+		daY/t5FzFEb8scDavWA+r9LIw7E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1134,7 +1134,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Er+KePXNGJWJqlLJvZ4Q1UPivPx48n+0zHt1Ri/PRQ=
+			Q8d+xcQh6k56FHIEYOz44IQguzzDkm7vT56gHlT8jlg=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -1162,7 +1162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			37qTdU5lgKwuuTcTG7+PxMD8HuTZMB6Hp9dUqob9DIc=
+			MpBPTuELpyBHVnbWbY3Y/y8TqwptxvYVnKrKJj6kCkI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

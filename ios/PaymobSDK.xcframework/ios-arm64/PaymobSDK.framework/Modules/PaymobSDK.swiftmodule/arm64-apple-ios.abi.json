@@ -52453,63 +52453,91 @@
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 2927,
+      "offset": 2905,
       "length": 6,
       "value": "\"card\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 3010,
+      "offset": 2988,
       "length": 10,
       "value": "\"e-wallet\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 3175,
+      "offset": 3153,
       "length": 11,
       "value": "\"apple-pay\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4153,
+      "offset": 3323,
+      "length": 18,
+      "value": "\"card-installment\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3436,
+      "length": 9,
+      "value": "\"contact\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3466,
+      "length": 13,
+      "value": "\"mid-takseet\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3598,
+      "length": 9,
+      "value": "\"aman_v3\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4107,
       "length": 16,
       "value": "\"integration_id\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4192,
+      "offset": 4146,
       "length": 9,
       "value": "\"is_eKYC\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4253,
+      "offset": 4207,
       "length": 13,
       "value": "\"method_type\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4329,
+      "offset": 4283,
       "length": 21,
       "value": "\"merchant_identifier\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4379,
+      "offset": 4333,
       "length": 15,
       "value": "\"extra_options\""
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/PaymentMethods\/Model\/RetrieveIntentionResponModel.swift",
       "kind": "StringLiteral",
-      "offset": 4675,
+      "offset": 4629,
       "length": 16,
       "value": "\"integration_id\""
     },
@@ -52733,14 +52761,14 @@
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/OTP\/OtpVC.swift",
       "kind": "IntegerLiteral",
-      "offset": 729,
+      "offset": 864,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/OTP\/OtpVC.swift",
       "kind": "IntegerLiteral",
-      "offset": 733,
+      "offset": 868,
       "length": 1,
       "value": "6"
     },
