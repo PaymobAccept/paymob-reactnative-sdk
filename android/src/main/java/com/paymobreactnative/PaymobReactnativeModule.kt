@@ -128,7 +128,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
    */
   @ReactMethod
   fun presentPayVC(clientSecret: String, publicKey: String) {
-    val context: Context = currentActivity ?: reactApplicationContext
+    val context: Context = reactApplicationContext.currentActivity ?: reactApplicationContext.applicationContext
 
     PaymobSdk.Builder(
       context = context,
