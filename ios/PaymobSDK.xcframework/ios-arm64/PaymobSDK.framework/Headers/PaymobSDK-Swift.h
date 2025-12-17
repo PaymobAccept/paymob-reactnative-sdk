@@ -772,6 +772,12 @@ SWIFT_CLASS("_TtC9PaymobSDK24KeyboardLayoutConstraint") SWIFT_AVAILABILITY(tvos,
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+SWIFT_CLASS("_TtC9PaymobSDK18PaymobCheckoutView")
+@interface PaymobCheckoutView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
 SWIFT_CLASS("_TtC9PaymobSDK11RadioButton")
 @interface RadioButton : RadioCheckboxBaseButton
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
