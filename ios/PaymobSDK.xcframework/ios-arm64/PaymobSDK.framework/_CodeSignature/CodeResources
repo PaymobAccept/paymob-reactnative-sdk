@@ -66,7 +66,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		2nBdFdUrZI3NJ+JWAH0366jZQF8=
+		23rMysc4Rxtntj1f3zhstVNBqEU=
 		</data>
 		<key>BKMoneyKit.bundle/CardLogo/amex@2x.png</key>
 		<data>
@@ -122,11 +122,11 @@
 		</data>
 		<key>BankCardList.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		/I0GCMqZSze6nhwIxsRi8MUWa/I=
+		WzkhHW5sgswMUN9oQSh+ntl9IlY=
 		</data>
 		<key>BankCardsView.nib</key>
 		<data>
-		6LxkEfVsUDd4QOqVgaurE9WGAdo=
+		Nfzkv0FPjoozQ98WZFdA5qWRGjg=
 		</data>
 		<key>BankInstallmentCell.nib</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Headers/PaymobSDK-Swift.h</key>
 		<data>
-		gQSmYNLkbw+8e2TEJSm0wiLGm04=
+		purszY0wrgHIpJaNaerBRv7Jzw4=
 		</data>
 		<key>Headers/PaymobSDK.h</key>
 		<data>
@@ -334,23 +334,23 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		AaJGw6DetmduGVyXV8qRVrL3dM8=
+		0Fx/wHZ4IpdJeseg3uDspop+hb8=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		kyYa3/U8lxp6euchLZ1bV78jkho=
+		RlV55D8cVf1jwOnOqPe0ApVtDiQ=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		g5Gtms/+B3f6/Oe6kl+l3W7olDM=
+		mBVCWGIxaSOEtoBBdarNevcJDD8=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		kyYa3/U8lxp6euchLZ1bV78jkho=
+		RlV55D8cVf1jwOnOqPe0ApVtDiQ=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		daY/t5FzFEb8scDavWA+r9LIw7E=
+		H+zmgLMPpa9GEhy4NeauOvHFhsE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -384,6 +384,26 @@
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
 		</data>
+		<key>NativeExpAddCardCell.nib</key>
+		<data>
+		QvOTPBhcNUCiYIoebyBOBH+NUWU=
+		</data>
+		<key>NativeExpAddCardView.nib</key>
+		<data>
+		8XILncVdfPSZ95HUvVI/BOJ18WM=
+		</data>
+		<key>NativeExpBankCardView.nib</key>
+		<data>
+		dpEQH64pwb7C4YoctswpwFZkvCo=
+		</data>
+		<key>NativeExpCardCell.nib</key>
+		<data>
+		06QIZt2RNezwJgi06OvX3ZWzd/w=
+		</data>
+		<key>NativeExpSavedCardView.nib</key>
+		<data>
+		nZmzAsIUQkgTwzyQc1s/EICC7ak=
+		</data>
 		<key>Otp.storyboardc/Info.plist</key>
 		<data>
 		0qcLahBP6/FJiJVxRnOp8WAip6E=
@@ -415,6 +435,10 @@
 		<key>PaymentMethods.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
 		VL0za56Su0ZOvoGS1TGFgfT2KOU=
+		</data>
+		<key>PaymobCheckoutView.nib</key>
+		<data>
+		6v3+Lq0e8nZXmepVHRh3GSfc+CM=
 		</data>
 		<key>PostPay.storyboardc/Info.plist</key>
 		<data>
@@ -556,6 +580,10 @@
 		<data>
 		oarX76FUKd6BbN2Y9PoFu/p6c0w=
 		</data>
+		<key>WebViewVC.nib</key>
+		<data>
+		FRnN5AIWnyMl6yuh+8pZ89+x8gc=
+		</data>
 		<key>countryCodes.json</key>
 		<data>
 		FUXmjU51atMAwoknCtGeASoDcz0=
@@ -672,7 +700,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tvt+DmcoUt+5kGOncETlfCYYRXdQbfnrjnI/XhjGwsk=
+			uEEkwv8LJ6EQwXq2HC+ye40DO3StKKfGdDH9vjK1k4o=
 			</data>
 		</dict>
 		<key>BKMoneyKit.bundle/CardLogo/amex@2x.png</key>
@@ -770,14 +798,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xPG3Jh4VJ7+1gmcJaFUmoq9gnh3NB4ojETWtPNSdy68=
+			M7nBtR3jqpzYcabr6eUiWUpSv69oDolQYmkP98wJ+EE=
 			</data>
 		</dict>
 		<key>BankCardsView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u4fFz/brpj0WSn1QKPfkSyEEuI8VDgcxsKUU0H/ea+g=
+			Huq269gF/IWyQ6wjir9pVSaJLjKv3XEZ/iCp2nmnWI4=
 			</data>
 		</dict>
 		<key>BankInstallmentCell.nib</key>
@@ -1092,7 +1120,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OHzl/wqleAFZnYuTfwp3mKjHO15SWg1TfIyeYPoY6x8=
+			d9mHv1nPzYyXBdC/jmmOxihFHFOUHYCMklbjaBB80fQ=
 			</data>
 		</dict>
 		<key>Headers/PaymobSDK.h</key>
@@ -1134,35 +1162,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q8d+xcQh6k56FHIEYOz44IQguzzDkm7vT56gHlT8jlg=
+			bt+tKMEr6g0EUlIHBQ+zW/5EGHjGqrChyXGtAoStyBc=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ovBXq5WyRAmijFABB9t6/jfDpsUqh3Wti9UFgTDUgzU=
+			aFuqbdwC4twdyAzbjVF6S0HICMp+PR5HgogMj3OfSAc=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e7S6FEYuo9s+xLNQElLS0pQ7R0Ey7OnHbK6gXszR2u0=
+			wDZB2AQEdH+qfQjK98uzcbnaVeHHWBNdm8i7mFJIrqc=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ovBXq5WyRAmijFABB9t6/jfDpsUqh3Wti9UFgTDUgzU=
+			aFuqbdwC4twdyAzbjVF6S0HICMp+PR5HgogMj3OfSAc=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MpBPTuELpyBHVnbWbY3Y/y8TqwptxvYVnKrKJj6kCkI=
+			exZk7QteUI97XSQS74iyGE7L7X/NQWR1PKnVEGWxpLw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1221,6 +1249,41 @@
 			kmHsztpgjvF0JW5f3HdMHm49z1M0CcG8OT1JDQHHE/E=
 			</data>
 		</dict>
+		<key>NativeExpAddCardCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FHXqNGOIKeef7/nuJA4F7By3g/kswIlywGCw0jeSRuY=
+			</data>
+		</dict>
+		<key>NativeExpAddCardView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Zk9HH8/Vsha4L1xZxdSnpMQd/0U0DhK6UFOrn21FCbU=
+			</data>
+		</dict>
+		<key>NativeExpBankCardView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1qSg2l7x+T1vfF2xp04PIMCYoTK4mwHo+cNrkzopZkk=
+			</data>
+		</dict>
+		<key>NativeExpCardCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pUUsHsFWFOpVK3WiP5tTpGIHA3l9nedRKFFrapeSC4g=
+			</data>
+		</dict>
+		<key>NativeExpSavedCardView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XOQiOFelXin0FLUWYv/PkDNZJd8zmz3pZkbeJj7LYh0=
+			</data>
+		</dict>
 		<key>Otp.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -1275,6 +1338,13 @@
 			<key>hash2</key>
 			<data>
 			Qtnm4iplgHJpItYvkPY96SSaJy5TdKCQ7xHckbljMwI=
+			</data>
+		</dict>
+		<key>PaymobCheckoutView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			G0voRo8U4yGWsRpTwTieDNJl5ys7ScV85YOpiIsw3a4=
 			</data>
 		</dict>
 		<key>PostPay.storyboardc/Info.plist</key>
@@ -1520,6 +1590,13 @@
 			<key>hash2</key>
 			<data>
 			mBeutc6+43GL/h7bHd50Rp4D2ckQxa+Ngq83Z8SRzUU=
+			</data>
+		</dict>
+		<key>WebViewVC.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OsTxSOSI/LyE8SjYYnFKplEnqE1c62r2UwPG428rV9k=
 			</data>
 		</dict>
 		<key>countryCodes.json</key>

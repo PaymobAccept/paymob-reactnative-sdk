@@ -94,21 +94,21 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
     }
 
   // MARK: - Transaction Status Handling
-  func transactionRejected() {
+ public func transactionRejected(message: String) {
       // Handle transaction rejection
       print("Transaction Rejected")
       let params: [String: Any] = ["status": "Fail"]
       emitEvent(eventName: "onTransactionStatus", params: params)
   }
 
-  func transactionAccepted(transactionDetails: [String: Any]) {
+ public func transactionAccepted(transactionDetails: [String: Any]) {
       // Handle transaction acceptance
       print("Transaction Accepted")
       var params: [String: Any] = ["status": "Success", "details": transactionDetails]
       emitEvent(eventName: "onTransactionStatus", params: params)
   }
 
-  func transactionPending() {
+ public func transactionPending() {
       // Handle transaction pending status
       print("Transaction Pending")
       let params: [String: Any] = ["status": "Pending"]

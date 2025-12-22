@@ -6,6 +6,7 @@ import CoreImage
 import DeveloperToolsSupport
 import Foundation
 import Network
+import ObjectiveC
 import PassKit
 @_exported import PaymobSDK
 import Swift
@@ -64,6 +65,31 @@ open class FPNCountryRepository {
 }
 public struct RadioButtonColor {
   public init(active: UIKit.UIColor, inactive: UIKit.UIColor)
+}
+public class NativeSDKStyle {
+  public var fontFamily: Swift.String?
+  public var fontSizeLabel: CoreFoundation.CGFloat?
+  public var fontSizeInputFields: CoreFoundation.CGFloat?
+  public var fontSizePaymentButton: CoreFoundation.CGFloat?
+  public var fontWeightLabel: UIKit.UIFont.Weight?
+  public var fontWeightInputFields: UIKit.UIFont.Weight?
+  public var fontWeightPaymentButton: UIKit.UIFont.Weight?
+  public var colorContainer: UIKit.UIColor?
+  public var colorBorderInputFields: UIKit.UIColor?
+  public var colorBorderPaymentButton: UIKit.UIColor?
+  public var colorDisabled: UIKit.UIColor?
+  public var colorError: UIKit.UIColor?
+  public var colorPrimary: UIKit.UIColor?
+  public var colorInputFields: UIKit.UIColor?
+  public var textColorForLabel: UIKit.UIColor?
+  public var textColorForPaymentButton: UIKit.UIColor?
+  public var textColorForInputFields: UIKit.UIColor?
+  public var colorForTextPlaceholder: UIKit.UIColor?
+  public var paymentButtonTitle: Swift.String?
+  public var radiusBorder: CoreFoundation.CGFloat?
+  public var containerPadding: CoreFoundation.CGFloat?
+  public init(jsonData: Foundation.Data) throws
+  @objc deinit
 }
 public protocol RadioButtonDelegate : AnyObject {
   func radioButtonDidSelect(_ button: RadioButton)
@@ -161,6 +187,17 @@ extension DropDown : UIKit.UITableViewDelegate {
   @_Concurrency.MainActor @preconcurrency @objc open func pickerView(_ pickerView: UIKit.UIPickerView, viewForRow row: Swift.Int, forComponent component: Swift.Int, reusing view: UIKit.UIView?) -> UIKit.UIView
   @_Concurrency.MainActor @preconcurrency @objc open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
   @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class PaymobCheckoutView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any PaymobSDKDelegate)?
+  @_Concurrency.MainActor @preconcurrency public func payFromOutside()
+  @objc deinit
+}
+extension PaymobCheckoutView {
+  @_Concurrency.MainActor @preconcurrency public func setPaymentKeys(publicKey: Swift.String?, clientSecret: Swift.String?)
+}
+extension PaymobCheckoutView {
+  @_Concurrency.MainActor @preconcurrency public func configure(uiCustomization: Swift.String?, showAddNewCard: Swift.Bool = true, payFromOutside: Swift.Bool = false, showSaveCard: Swift.Bool = true, saveCardDefault: Swift.Bool = false)
 }
 @objc @_Concurrency.MainActor @preconcurrency open class CheckboxButtonContainerView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var buttonContainer: CheckboxButtonContainer {
@@ -622,7 +659,7 @@ public class PaymobSDK {
   weak public var delegate: (any PaymobSDKDelegate)?
   public var paymobSDKCustomization: PaymobSDKCustomization
   public init()
-  public func presentPayVC(VC: UIKit.UIViewController, PublicKey publicKey: Swift.String?, ClientSecret clientSecret: Swift.String?, SavedBankCards savedBankCards: [SavedBankCard]? = []) throws
+  public func presentPayVC(VC: UIKit.UIViewController, PublicKey publicKey: Swift.String?, ClientSecret clientSecret: Swift.String?) throws
   @objc deinit
 }
 extension Foundation.Bundle {
@@ -702,7 +739,7 @@ public class RadioCheckboxBaseContainer<T> where T : RadioCheckboxBaseButton {
   @objc deinit
 }
 public protocol PaymobSDKDelegate : AnyObject {
-  func transactionRejected()
+  func transactionRejected(message: Swift.String)
   func transactionAccepted(transactionDetails: [Swift.String : Any])
   func transactionPending()
 }

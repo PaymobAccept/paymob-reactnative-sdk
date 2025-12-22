@@ -97,7 +97,13 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //   implementation fileTree(dir: 'libs', include: ['*.aar'])
-  implementation("com.paymob.sdk:Paymob-SDK:1.6.12")
+  implementation("com.paymob.sdk:Paymob-SDK:1.7.0")
 
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+  kotlinOptions {
+    freeCompilerArgs += '-Xskip-metadata-version-check'
+  }
 }
 

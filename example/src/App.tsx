@@ -14,8 +14,10 @@ import Paymob, {
   PaymentStatus,
   type PaymentResponse,
 } from 'paymob-reactnative';
+import PaymobEmbeddedView from './PaymobEmbeddedView';
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState<'home' | 'embedded'>('home');
   const [appName, setAppName] = useState<string>('');
   const [isSaveCardEnabled, setSaveCardEnabled] = useState<boolean>(true);
   const [isShowConfirmationPage, setShowConfirmationPage] =
@@ -56,6 +58,11 @@ export default function App() {
       Paymob.removeSdkListener();
     };
   }, []);
+
+  // Show PaymobEmbeddedView if currentScreen is 'embedded'
+  if (currentScreen === 'embedded') {
+    return <PaymobEmbeddedView onBack={() => setCurrentScreen('home')} />;
+  }
 
   return (
     <View style={styles.container}>
@@ -214,11 +221,18 @@ export default function App() {
         <Button
           onPress={() => {
             Paymob.presentPayVC(
-              'egy_csk_test_97b1e36553b6fa4b9793b7c3d5657250',
-              'egy_pk_test_LVWASE8YxObheYSAqOxxN3xT99yuXtFw'
+              'egy_csk_test_470ff99341ee584adf6ee587f7d199be',
+              'egy_pk_test_jbtqjbZUZpcvIjvMSHrAXVQ2dFVsS0xi'
             );
           }}
           title="Present Paymob"
+        />
+
+        <View style={{ height: 16 }} />
+
+        <Button
+          onPress={() => setCurrentScreen('embedded')}
+          title="Go to Paymob Embedded View"
         />
       </View>
     </View>
