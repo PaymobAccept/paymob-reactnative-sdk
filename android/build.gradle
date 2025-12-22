@@ -97,7 +97,10 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //   implementation fileTree(dir: 'libs', include: ['*.aar'])
-  implementation("com.paymob.sdk:Paymob-SDK:1.7.0")
+  implementation("com.paymob.sdk:Paymob-SDK:1.7.0") {
+    exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    exclude group: 'com.squareup.okio', module: 'okio'
+}
 
 }
 
