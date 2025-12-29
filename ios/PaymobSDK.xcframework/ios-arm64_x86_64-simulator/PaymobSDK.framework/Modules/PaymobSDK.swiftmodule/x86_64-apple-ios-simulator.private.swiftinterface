@@ -190,6 +190,8 @@ extension DropDown : UIKit.UITableViewDelegate {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class PaymobCheckoutView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency weak public var delegate: (any PaymobSDKDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var onHeightChanged: ((CoreFoundation.CGFloat) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency public func payFromOutside()
   @objc deinit
 }

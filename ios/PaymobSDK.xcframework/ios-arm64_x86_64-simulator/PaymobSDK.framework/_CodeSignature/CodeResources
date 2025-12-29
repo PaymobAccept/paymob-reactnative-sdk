@@ -306,7 +306,7 @@
 		</data>
 		<key>Headers/PaymobSDK-Swift.h</key>
 		<data>
-		SO+5g3I/g5DOtwRXgqlJtuRSXIg=
+		BnOV9bCX58cgzcjIkG/7ZhXsBkY=
 		</data>
 		<key>Headers/PaymobSDK.h</key>
 		<data>
@@ -334,11 +334,11 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		2Fc/MofFMW/W4NgSUlmwdfDoPuE=
+		H7BWt4dehlqvuCSV/1+8A3reb78=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		qSBwPo4OXikYEoUavOlUkLGb6Ms=
+		KsyYrJ+GuDRbd2ht3iwbSaSsZhg=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -346,19 +346,19 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qSBwPo4OXikYEoUavOlUkLGb6Ms=
+		KsyYrJ+GuDRbd2ht3iwbSaSsZhg=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JHrYMq2Fr/E56LX9+496Vi9tul0=
+		qG0gxzZg1l0ZIdRGoFF+qoub4/I=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		2Fc/MofFMW/W4NgSUlmwdfDoPuE=
+		H7BWt4dehlqvuCSV/1+8A3reb78=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Us+PJgcuTSnYb7Tp1/34ZWWSuzw=
+		pTafx7wL6SX6YPDjXWwRXWL0ahg=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -366,11 +366,11 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Us+PJgcuTSnYb7Tp1/34ZWWSuzw=
+		pTafx7wL6SX6YPDjXWwRXWL0ahg=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		drwWjWGpk23Qvv4hdLRM8SnqzXc=
+		40VFxsw73f0n8jjCQhI+8A0t02M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1140,7 +1140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jm0h+DDSwc9Z3LogIK+oApt6dWMf7CnGlIcdKXJke/w=
+			hW5/JmAMEqQf81FAffU5a/lDnsQuqBt/O5DlofvHQVQ=
 			</data>
 		</dict>
 		<key>Headers/PaymobSDK.h</key>
@@ -1182,14 +1182,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tqeur3C31kFzNboHIjlCCkn8aV5GDxy94P3iuCJMf5s=
+			lz+q8kZgboxcjgpgJ5xX6M0QWYLchsfAXcCzD7B/3v8=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CsCIphEYsaPo+YzLWiMJCi5zRSqwRCpjhUJTRN2JcLE=
+			CEF5Menc2J+DOV8QKneifGwdWz84YGekkVL8uh/qaIk=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -1203,28 +1203,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CsCIphEYsaPo+YzLWiMJCi5zRSqwRCpjhUJTRN2JcLE=
+			CEF5Menc2J+DOV8QKneifGwdWz84YGekkVL8uh/qaIk=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SzuGuCSOh/5VDIty9G8nr9ttL8xtDLImqHrPBrRKor4=
+			3noCnBJfNtes5ZXVj5pjCZ1qrF4KEtmbXJv0o4TPfmI=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tqeur3C31kFzNboHIjlCCkn8aV5GDxy94P3iuCJMf5s=
+			lz+q8kZgboxcjgpgJ5xX6M0QWYLchsfAXcCzD7B/3v8=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q8EowviC923yRyvhske/ouYbwn7qPf74mZ9EVQ8V4CQ=
+			y9EIb+CCTyoLcR73ZcnVpYfcGBuVCY+e/DbTRsns0i8=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -1238,14 +1238,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q8EowviC923yRyvhske/ouYbwn7qPf74mZ9EVQ8V4CQ=
+			y9EIb+CCTyoLcR73ZcnVpYfcGBuVCY+e/DbTRsns0i8=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AYlCOt5Oz1x+YaaMCKyYA70uLo7t0/MVEMkrsEmmeis=
+			hxpWnzV1gO2g/x6Yk2I+1612vnBxehUjIB7qY/zgOLY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

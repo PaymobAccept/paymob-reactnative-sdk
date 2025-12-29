@@ -776,6 +776,7 @@ SWIFT_CLASS("_TtC9PaymobSDK18PaymobCheckoutView")
 @interface PaymobCheckoutView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 SWIFT_CLASS("_TtC9PaymobSDK11RadioButton")
