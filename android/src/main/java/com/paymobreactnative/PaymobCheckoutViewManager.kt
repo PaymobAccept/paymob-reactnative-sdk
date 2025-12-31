@@ -12,6 +12,7 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.common.MapBuilder
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.SimpleViewManager
+import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.events.RCTEventEmitter
 import com.paymob.paymob_sdk.ui.PaymobSdkListener
@@ -30,11 +31,14 @@ class PaymobCheckoutWrapper(context: Context) : FrameLayout(context) {
             
             val child = getChildAt(0)
             if (child != null) {
-                val heightInDip = PixelUtil.toDIPFromPixel(child.measuredHeight.toFloat()).toInt()
-                val eventArgs = Arguments.createMap()
-                eventArgs.putInt("height", heightInDip)
-                (context as? ReactContext)?.getJSModule(RCTEventEmitter::class.java)
-                    ?.receiveEvent(id, "onHeightChange", eventArgs)
+                val measuredWidth = child.measuredWidth
+                val measuredHeight = child.measuredHeight
+                
+                // Synchronize with React Shadow Tree / Yoga
+                (context as? ReactContext)?.runOnNativeModulesQueueThread {
+                    val uiManager = (context as ReactContext).getNativeModule(UIManagerModule::class.java)
+                    uiManager?.updateNodeSize(id, measuredWidth, measuredHeight)
+                }
             }
         }
     }
@@ -61,7 +65,6 @@ class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
             .put("onSuccess", MapBuilder.of("registrationName", "onSuccess"))
             .put("onFailure", MapBuilder.of("registrationName", "onFailure"))
             .put("onPending", MapBuilder.of("registrationName", "onPending"))
-            .put("onHeightChange", MapBuilder.of("registrationName", "onHeightChange"))
             .build()
     }
 

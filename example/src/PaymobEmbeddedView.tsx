@@ -11,7 +11,7 @@ import {
     Platform,
 } from 'react-native';
 
-import type { ViewStyle, StyleProp, DimensionValue } from 'react-native';
+import type { ViewStyle, StyleProp } from 'react-native';
 
 interface PaymobEmbeddedViewProps {
     onBack: () => void;
@@ -22,7 +22,6 @@ type PaymobCheckoutViewProps = {
     onSuccess?: (event: any) => void;
     onFailure?: (event: any) => void;
     onPending?: (event: any) => void;
-    onHeightChange?: (event: any) => void;
 };
 
 const ComponentName = 'PaymobCheckoutView';
@@ -34,7 +33,6 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
     const nativeViewRef = useRef<any>(null);
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<string>('');
-    const [viewHeight, setViewHeight] = useState<DimensionValue>(1); // Start with 1 to trigger initial layout
 
     // Secrets (In real app, fetch these securely)
     const publicKey = 'egy_pk_test_jbtqjbZUZpcvIjvMSHrAXVQ2dFVsS0xi';
@@ -106,13 +104,6 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
         setStatus('Pending');
     };
 
-    const handleHeightChange = (event: any) => {
-        const h = event.nativeEvent.height;
-        if (h && h > 0) {
-            setViewHeight(h);
-        }
-    };
-
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -124,11 +115,10 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
 
             <PaymobCheckoutView
                 ref={nativeViewRef}
-                style={[styles.embeddedView, { height: viewHeight }]}
+                style={styles.embeddedView}
                 onSuccess={handleSuccess}
                 onFailure={handleFailure}
                 onPending={handlePending}
-                onHeightChange={handleHeightChange}
             />
 
             <View style={styles.footer}>
