@@ -1,12 +1,16 @@
 package com.paymobreactnative
 
 import android.content.Context
+import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
 import androidx.activity.ComponentActivity
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.common.MapBuilder
+import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.events.RCTEventEmitter
@@ -14,14 +18,42 @@ import com.paymob.paymob_sdk.ui.PaymobSdkListener
 import com.paymob.paymob_sdk.ui.embedded.PaymobCheckoutView
 import java.util.HashMap
 
-class PaymobCheckoutViewManager : SimpleViewManager<PaymobCheckoutView>() {
+class PaymobCheckoutWrapper(context: Context) : FrameLayout(context) {
+    override fun requestLayout() {
+        super.requestLayout()
+        post {
+            measure(
+                MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),
+                MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED)
+            )
+            layout(left, top, right, bottom)
+            
+            val child = getChildAt(0)
+            if (child != null) {
+                val heightInDip = PixelUtil.toDIPFromPixel(child.measuredHeight.toFloat()).toInt()
+                val eventArgs = Arguments.createMap()
+                eventArgs.putInt("height", heightInDip)
+                (context as? ReactContext)?.getJSModule(RCTEventEmitter::class.java)
+                    ?.receiveEvent(id, "onHeightChange", eventArgs)
+            }
+        }
+    }
+}
+
+class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
 
     override fun getName(): String {
         return "PaymobCheckoutView"
     }
 
-    override fun createViewInstance(reactContext: ThemedReactContext): PaymobCheckoutView {
-        return PaymobCheckoutView(reactContext)
+    override fun createViewInstance(reactContext: ThemedReactContext): FrameLayout {
+        val wrapper = PaymobCheckoutWrapper(reactContext)
+        val checkoutView = PaymobCheckoutView(reactContext)
+        wrapper.addView(checkoutView, FrameLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        ))
+        return wrapper
     }
 
     override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any>? {
@@ -29,11 +61,14 @@ class PaymobCheckoutViewManager : SimpleViewManager<PaymobCheckoutView>() {
             .put("onSuccess", MapBuilder.of("registrationName", "onSuccess"))
             .put("onFailure", MapBuilder.of("registrationName", "onFailure"))
             .put("onPending", MapBuilder.of("registrationName", "onPending"))
+            .put("onHeightChange", MapBuilder.of("registrationName", "onHeightChange"))
             .build()
     }
 
-    override fun receiveCommand(root: PaymobCheckoutView, commandId: String, args: ReadableArray?) {
+    override fun receiveCommand(root: FrameLayout, commandId: String, args: ReadableArray?) {
         super.receiveCommand(root, commandId, args)
+        val checkoutView = root.getChildAt(0) as? PaymobCheckoutView ?: return
+
         if (commandId == "configure" && args != null) {
             val configMap = args.getMap(0) ?: return
             
@@ -48,13 +83,13 @@ class PaymobCheckoutViewManager : SimpleViewManager<PaymobCheckoutView>() {
             val payFromOutside = if (configMap.hasKey("payFromOutside")) configMap.getBoolean("payFromOutside") else false
 
             // Get Activity
-            val context = root.context as? ReactContext
+            val context = checkoutView.context as? ReactContext
             val activity = context?.currentActivity as? ComponentActivity
 
             if (activity != null && publicKey != null && clientSecret != null) {
                 
                 // Configure View
-                root.configure(
+                checkoutView.configure(
                     activity = activity,
                     uiCustomization = uiCustomization,
                     showAddNewCard = showAddNewCard,
@@ -84,9 +119,6 @@ class PaymobCheckoutViewManager : SimpleViewManager<PaymobCheckoutView>() {
                         }
                     }
                 )
-
-                // Set Payment Keys - REMOVED from configure
-                // root.setPaymentKeys(publicKey, clientSecret)
             }
         } else if (commandId == "setPaymentKeys" && args != null) {
              val configMap = args.getMap(0) ?: return
@@ -94,7 +126,7 @@ class PaymobCheckoutViewManager : SimpleViewManager<PaymobCheckoutView>() {
              val clientSecret = if (configMap.hasKey("clientSecret")) configMap.getString("clientSecret") else ""
              
              if (publicKey != null && clientSecret != null) {
-                 root.setPaymentKeys(publicKey, clientSecret)
+                 checkoutView.setPaymentKeys(publicKey, clientSecret)
              }
         }
     }

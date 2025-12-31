@@ -11,17 +11,18 @@ import {
     Platform,
 } from 'react-native';
 
-import type { ViewStyle } from 'react-native';
+import type { ViewStyle, StyleProp, DimensionValue } from 'react-native';
 
 interface PaymobEmbeddedViewProps {
     onBack: () => void;
 }
 
 type PaymobCheckoutViewProps = {
-    style: ViewStyle;
+    style?: StyleProp<ViewStyle>;
     onSuccess?: (event: any) => void;
     onFailure?: (event: any) => void;
     onPending?: (event: any) => void;
+    onHeightChange?: (event: any) => void;
 };
 
 const ComponentName = 'PaymobCheckoutView';
@@ -33,10 +34,11 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
     const nativeViewRef = useRef<any>(null);
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<string>('');
+    const [viewHeight, setViewHeight] = useState<DimensionValue>(1); // Start with 1 to trigger initial layout
 
     // Secrets (In real app, fetch these securely)
     const publicKey = 'egy_pk_test_jbtqjbZUZpcvIjvMSHrAXVQ2dFVsS0xi';
-    const clientSecret = 'egy_csk_test_470ff99341ee584adf6ee587f7d199be';
+    const clientSecret = 'egy_csk_test_25a7caa73c73b0c89aa764e0db8fa983';
 
     // 1. Initial Configure (Settings only)
     useEffect(() => {
@@ -104,6 +106,13 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
         setStatus('Pending');
     };
 
+    const handleHeightChange = (event: any) => {
+        const h = event.nativeEvent.height;
+        if (h && h > 0) {
+            setViewHeight(h);
+        }
+    };
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -115,10 +124,11 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
 
             <PaymobCheckoutView
                 ref={nativeViewRef}
-                style={styles.embeddedView}
+                style={[styles.embeddedView, { height: viewHeight }]}
                 onSuccess={handleSuccess}
                 onFailure={handleFailure}
                 onPending={handlePending}
+                onHeightChange={handleHeightChange}
             />
 
             <View style={styles.footer}>
@@ -158,7 +168,6 @@ const styles = StyleSheet.create({
         color: 'gray'
     },
     embeddedView: {
-        height: '50%',
         width: '100%',
         backgroundColor: 'white' // Ensure visible
     },
