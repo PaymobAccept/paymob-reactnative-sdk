@@ -71,21 +71,27 @@ public class NativeSDKStyle {
   public var fontSizeLabel: CoreFoundation.CGFloat?
   public var fontSizeInputFields: CoreFoundation.CGFloat?
   public var fontSizePaymentButton: CoreFoundation.CGFloat?
+  public var fontSizeVerifyButton: CoreFoundation.CGFloat?
   public var fontWeightLabel: UIKit.UIFont.Weight?
   public var fontWeightInputFields: UIKit.UIFont.Weight?
   public var fontWeightPaymentButton: UIKit.UIFont.Weight?
+  public var fontWeightVerifyButton: UIKit.UIFont.Weight?
   public var colorContainer: UIKit.UIColor?
   public var colorBorderInputFields: UIKit.UIColor?
   public var colorBorderPaymentButton: UIKit.UIColor?
+  public var colorBorderVerifyButton: UIKit.UIColor?
   public var colorDisabled: UIKit.UIColor?
   public var colorError: UIKit.UIColor?
   public var colorPrimary: UIKit.UIColor?
   public var colorInputFields: UIKit.UIColor?
   public var textColorForLabel: UIKit.UIColor?
   public var textColorForPaymentButton: UIKit.UIColor?
+  public var textColorForVerifyButton: UIKit.UIColor?
   public var textColorForInputFields: UIKit.UIColor?
   public var colorForTextPlaceholder: UIKit.UIColor?
   public var paymentButtonTitle: Swift.String?
+  public var verifyButtonTitle: Swift.String?
+  public var verifyMessageTitle: Swift.String?
   public var radiusBorder: CoreFoundation.CGFloat?
   public var containerPadding: CoreFoundation.CGFloat?
   public init(jsonData: Foundation.Data) throws
