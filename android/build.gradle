@@ -97,16 +97,11 @@ dependencies {
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 //   implementation fileTree(dir: 'libs', include: ['*.aar'])
-  implementation("com.paymob.sdk:Paymob-SDK:1.7.2")
-
+  implementation("com.paymob.sdk:Paymob-SDK:1.7.2"){
+    exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    exclude group: 'com.squareup.okio', module: 'okio'
 }
 
-configurations.all {
-  resolutionStrategy {
-    force "com.squareup.okhttp3:okhttp:4.9.2"
-    force "com.squareup.okhttp3:logging-interceptor:4.9.2"
-    force "com.squareup.okio:okio:2.9.0"
-  }
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
