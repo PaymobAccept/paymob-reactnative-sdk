@@ -12,6 +12,7 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.common.MapBuilder
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.SimpleViewManager
+import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.events.RCTEventEmitter
@@ -36,8 +37,11 @@ class PaymobCheckoutWrapper(context: Context) : FrameLayout(context) {
                 
                 // Synchronize with React Shadow Tree / Yoga
                 (context as? ReactContext)?.runOnNativeModulesQueueThread {
-                    val uiManager = (context as ReactContext).getNativeModule(UIManagerModule::class.java)
-                    uiManager?.updateNodeSize(id, measuredWidth, measuredHeight)
+                    val reactContext = context as? ReactContext ?: return@runOnNativeModulesQueueThread
+                    val uiManager = UIManagerHelper.getUIManagerForReactTag(reactContext, id)
+                    if (uiManager is UIManagerModule) {
+                        uiManager.updateNodeSize(id, measuredWidth, measuredHeight)
+                    }
                 }
             }
         }
