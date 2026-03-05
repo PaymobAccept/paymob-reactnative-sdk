@@ -14,7 +14,7 @@
 		</data>
 		<key>AddBankCard.storyboardc/c83-wc-yzt-view-Bjy-zi-dxz.nib</key>
 		<data>
-		YBegu5mtdy0F55jeKWZ/6JAL0Bs=
+		0y9b5TkKdV7w56giH8Vm9Llk684=
 		</data>
 		<key>AddBankCardCell.nib/objects-14.0+.nib</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		trmaCmxcTx8dQQ61LXmg6G5piv8=
+		t1tHr5bo0ND0x/oluoxZt+BheYg=
 		</data>
 		<key>BKMoneyKit.bundle/CardLogo/amex@2x.png</key>
 		<data>
@@ -128,10 +128,6 @@
 		<data>
 		Nfzkv0FPjoozQ98WZFdA5qWRGjg=
 		</data>
-		<key>BankInstallmentCell.nib</key>
-		<data>
-		wbKU0BtBon50B0tpkJUCnolSxIg=
-		</data>
 		<key>BankInstallments.storyboardc/BankInstallmentsVC.nib</key>
 		<data>
 		WyE3yD5/ERbs5HZhU1zLEfpdOkA=
@@ -142,7 +138,11 @@
 		</data>
 		<key>BankInstallments.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		79rmriUswvU2XinpvsAb1uzj2aA=
+		835agWz3Nn39IZ0zO29JIUoQPd8=
+		</data>
+		<key>BankInstallmentsCell.nib</key>
+		<data>
+		aAzwBQ9mDjq1kHbh8o7OwPQhib8=
 		</data>
 		<key>Confirmation.storyboardc/ConfirmationViewController.nib</key>
 		<data>
@@ -328,13 +328,17 @@
 		<data>
 		jcUk4MtVcxHFwj0Hfej//fsgz1c=
 		</data>
+		<key>InstallmentPlanCell.nib</key>
+		<data>
+		5W8gwnVr6knof9ohgfgChZqk67c=
+		</data>
 		<key>InstallmentsView.nib</key>
 		<data>
-		GShGoVdLnaX2hIJc411GxdDq+b8=
+		yQCPo2MmtJ4AHJ9yJie4PGnq/kE=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		U2t0bvgB8obiZRH8A9/s6SIPdCE=
+		i4GuePTMi2B2ek7eLiW9Rjl9KOE=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -350,7 +354,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		XjA5Kv+gaFpFecwM5QbUngTEyKY=
+		fWfvbTrZFjCn0rQx7i/XHEoemO0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -386,7 +390,7 @@
 		</data>
 		<key>NativeExpAddCardCell.nib</key>
 		<data>
-		QvOTPBhcNUCiYIoebyBOBH+NUWU=
+		RcEbMwLiHkj/tTatFOsOQaQoDq0=
 		</data>
 		<key>NativeExpAddCardView.nib</key>
 		<data>
@@ -613,7 +617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yEUCmUmpHXn4AkgM4CTSblnIRoqat2JbWKcYu+VzTII=
+			kEjMfr5y5YsB9q6iCtJ08spaJ8zlldj1UTCCrrpsBUA=
 			</data>
 		</dict>
 		<key>AddBankCardCell.nib/objects-14.0+.nib</key>
@@ -704,7 +708,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			So3ZJjMv8ih8ug48152o45gDKDpMJSQqHUYzQnFkUH8=
+			FoVgZYPpYnYH+LUhk1bteOhb/p57fEDlugVFOCXbWls=
 			</data>
 		</dict>
 		<key>BKMoneyKit.bundle/CardLogo/amex@2x.png</key>
@@ -812,13 +816,6 @@
 			Huq269gF/IWyQ6wjir9pVSaJLjKv3XEZ/iCp2nmnWI4=
 			</data>
 		</dict>
-		<key>BankInstallmentCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0CLvcg1MXCEHjOT5ojrVoKcSiQidgVpA5DZmnHAVXSQ=
-			</data>
-		</dict>
 		<key>BankInstallments.storyboardc/BankInstallmentsVC.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -837,7 +834,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W5VqQaqdHvmXCGwg4/H6nuuUJ72eDMCnWUfuWQXloLM=
+			fpehWtOCn5DhqWCJ0kDCTt9iqlUsxEGJb/lUbc6GjWY=
+			</data>
+		</dict>
+		<key>BankInstallmentsCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VYl9XIfDTv8n5iW56YgVGn1vMLim6D6eJ5+e4BrJlSQ=
 			</data>
 		</dict>
 		<key>Confirmation.storyboardc/ConfirmationViewController.nib</key>
@@ -1155,18 +1159,25 @@
 			rccNJA2PTfZuDmhu6gGOKu7m9OqBOQ+3trKpD4q7nN8=
 			</data>
 		</dict>
+		<key>InstallmentPlanCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H93wvIyqbq6H5H0UcOBuiOjPFyhjpsXSFGiw0W5GkZc=
+			</data>
+		</dict>
 		<key>InstallmentsView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8OUk+3JbRVzSuYQWhoPQNpuC3T9oVUzn0aNBPNP0LXg=
+			YcpfzGHY3rdy2vdQ2ZXRFIdjtmt0VJ5GWhXdFHm5BeI=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HWWmQPDgtbg/nVRi3dGzpE4lAmT3sJRr/nOBk3Gs+N4=
+			9tPcSBwPaK6oPVxn+B9siwY6qjSS0deetc/SNYTn4rU=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -1194,7 +1205,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mINrDR7Dam+YU4QtJJuXNKwZyqC+wn/W3faMklcwsXY=
+			zs+DFNnsZd4I/J5RekEg0L2BJ48cDKvoPp0WzTnxcgc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1257,7 +1268,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FHXqNGOIKeef7/nuJA4F7By3g/kswIlywGCw0jeSRuY=
+			DCwy5pArn9oDWdDZsiGKsmDc57FVuuyqungsioJfRkc=
 			</data>
 		</dict>
 		<key>NativeExpAddCardView.nib</key>
