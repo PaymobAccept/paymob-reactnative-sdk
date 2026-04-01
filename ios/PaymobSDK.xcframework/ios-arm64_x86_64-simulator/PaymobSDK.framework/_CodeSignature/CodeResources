@@ -66,7 +66,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		t1tHr5bo0ND0x/oluoxZt+BheYg=
+		eeQPJQGPqJBtiLYX+zONG8TwgAU=
 		</data>
 		<key>BKMoneyKit.bundle/CardLogo/amex@2x.png</key>
 		<data>
@@ -334,11 +334,11 @@
 		</data>
 		<key>InstallmentsView.nib</key>
 		<data>
-		yQCPo2MmtJ4AHJ9yJie4PGnq/kE=
+		4lHcpimJtsDnUoO0xokao2FX6j8=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		AMFH3XrJQNLsz1KUJZs/HiBRwsE=
+		xQj5oXQIc2Iuvtus9zLj2ucXok4=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -354,11 +354,11 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		r47LR+LR/P2t4shAuX/0YMl9CBs=
+		tuGyHP0G3A3b8rnnetQ6LSXHMqM=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		AMFH3XrJQNLsz1KUJZs/HiBRwsE=
+		xQj5oXQIc2Iuvtus9zLj2ucXok4=
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -374,7 +374,7 @@
 		</data>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nqpxMFT4Nz38U4hJyAzUNjE/n/s=
+		lipvmjIZkSQzDr7PhF75RdbPWB4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -582,7 +582,7 @@
 		</data>
 		<key>ValuInstallments.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		Vsc07t2zBs9xG1u9N9DPQpWu9ZM=
+		AV5P27Gqh2Il6foeAcvLhpNLUWA=
 		</data>
 		<key>ValuMobileNumber.storyboardc/Info.plist</key>
 		<data>
@@ -728,7 +728,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FoVgZYPpYnYH+LUhk1bteOhb/p57fEDlugVFOCXbWls=
+			D0sYrkg3cvkYfT+UEObHoPyV/2B++BkuoBYa7jVtO1Q=
 			</data>
 		</dict>
 		<key>BKMoneyKit.bundle/CardLogo/amex@2x.png</key>
@@ -1190,14 +1190,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YcpfzGHY3rdy2vdQ2ZXRFIdjtmt0VJ5GWhXdFHm5BeI=
+			HypmuVYx99dcuviaGSvvJQ7mIeL9zT30kNyTGmPiPpo=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wSUxdDaciJVeieouIPTURz2z4cuE5u74S4n+1s+F9/4=
+			3T+aQo0ZNtLmarzEELiGjxN7LNYYLthfqf8mxBUr74Y=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1225,14 +1225,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LmnWF88GBEHLzn709YbhwX6mbQ+8tsD1ldWD5Ohjelo=
+			QTP3qOlZr9bS/7ejBreD75GgzJP7MKjG0jzpNgo1ZPI=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wSUxdDaciJVeieouIPTURz2z4cuE5u74S4n+1s+F9/4=
+			3T+aQo0ZNtLmarzEELiGjxN7LNYYLthfqf8mxBUr74Y=
 			</data>
 		</dict>
 		<key>Modules/PaymobSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -1260,7 +1260,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oPyRx9Rp6UbFjppy+t7rmLOqq+go5VXm8GGtc1dSpE4=
+			h01TASDztK6xm0Xe0etKz0UCfaw52X6wfVQ2JDAurUE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1624,7 +1624,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AdfMWlykaD7kl7LR/44gXRtOE1FA6iq3Ek68amPGCkQ=
+			zLCvPnwoEbPK7TOkA0XdPK+drok4aamyHoc49IBFu5Y=
 			</data>
 		</dict>
 		<key>ValuMobileNumber.storyboardc/Info.plist</key>
