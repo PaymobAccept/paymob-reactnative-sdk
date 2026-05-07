@@ -86,6 +86,9 @@ android {
 repositories {
   mavenCentral()
   google()
+  maven {
+    url "$projectDir/libs"
+  }
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
