@@ -35,14 +35,13 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
     const [status, setStatus] = useState<string>('');
 
     // Secrets (In real app, fetch these securely)
-    const publicKey = 'egy_pk_test_jbtqjbZUZpcvIjvMSHrAXVQ2dFVsS0xi';
-    const clientSecret = 'egy_csk_test_25a7caa73c73b0c89aa764e0db8fa983';
+    const publicKey = 'egy_pk_test_huLoawdiICfwok1UVzEvQ4R3OajoyI1b';
+    const clientSecret = 'egy_csk_test_6444aa2bb1ba00364ce9a5bc46a146b9';
 
     // 1. Initial Configure (Settings only)
     useEffect(() => {
         if (nativeViewRef.current) {
             const config = {
-                uiCustomization: '{"Payment_Button_Title": "Pay Now"}',
                 showAddNewCard: true,
                 showSaveCard: true,
                 saveCardByDefault: false,
