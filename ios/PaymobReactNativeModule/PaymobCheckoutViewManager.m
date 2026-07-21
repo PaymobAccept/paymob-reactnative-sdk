@@ -4,6 +4,7 @@
 
 RCT_EXPORT_VIEW_PROPERTY(onSuccess, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onFailure, RCTDirectEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(onCancelled, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onPending, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(layoutVersion, NSNumber)
 

@@ -166,8 +166,15 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
   /**
    * Called when the payment process fails.
    */
-  override fun onFailure(msg: String?) {
+  override fun onFailure(msg: String) {
     emitTransactionStatus("Fail")
+  }
+
+  /**
+   * Called when the payment process is cancelled.
+   */
+  override fun onCancelled() {
+    emitTransactionStatus("Cancelled")
   }
 
   /**

@@ -46,6 +46,11 @@ export default function App() {
             Alert.alert('Payment result', PaymentStatus.FAIL);
           });
           break;
+        case PaymentStatus.CANCELLED:
+          requestAnimationFrame(() => {
+            Alert.alert('Payment result', PaymentStatus.CANCELLED);
+          });
+          break;
         case PaymentStatus.PENDING:
           requestAnimationFrame(() => {
             Alert.alert('Payment result', PaymentStatus.PENDING);
@@ -222,7 +227,7 @@ export default function App() {
           onPress={() => {
             Paymob.presentPayVC(
               'egy_csk_test_470ff99341ee584adf6ee587f7d199be',
-              'egy_pk_test_jbtqjbZUZpcvIjvMSHrAXVQ2dFVsS0xi'
+              'egy_pk_test_huLoawdiICfwok1UVzEvQ4R3OajoyI1b'
             );
           }}
           title="Present Paymob"

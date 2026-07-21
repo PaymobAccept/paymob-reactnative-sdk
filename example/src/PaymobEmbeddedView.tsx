@@ -21,6 +21,7 @@ type PaymobCheckoutViewProps = {
     style?: StyleProp<ViewStyle>;
     onSuccess?: (event: any) => void;
     onFailure?: (event: any) => void;
+    onCancelled?: (event: any) => void;
     onPending?: (event: any) => void;
 };
 
@@ -36,7 +37,7 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
 
     // Secrets (In real app, fetch these securely)
     const publicKey = 'egy_pk_test_huLoawdiICfwok1UVzEvQ4R3OajoyI1b';
-    const clientSecret = 'egy_csk_test_6444aa2bb1ba00364ce9a5bc46a146b9';
+    const clientSecret = 'egy_csk_test_fa21fc3c29bdfe3fac232f2e2f520b4c';
 
     // 1. Initial Configure (Settings only)
     useEffect(() => {
@@ -98,6 +99,11 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
         setStatus('Failure: ' + (event.nativeEvent?.error || 'Unknown'));
     };
 
+    const handleCancelled = (event: any) => {
+        console.log('Paymob Cancelled:', event.nativeEvent);
+        setStatus('Cancelled');
+    };
+
     const handlePending = (event: any) => {
         console.log('Paymob Pending:', event.nativeEvent);
         setStatus('Pending');
@@ -117,6 +123,7 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
                 style={styles.embeddedView}
                 onSuccess={handleSuccess}
                 onFailure={handleFailure}
+                onCancelled={handleCancelled}
                 onPending={handlePending}
             />
 

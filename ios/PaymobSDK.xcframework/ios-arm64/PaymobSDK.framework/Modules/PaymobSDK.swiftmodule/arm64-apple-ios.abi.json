@@ -34649,6 +34649,30 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "transactionCancelled",
+            "printedName": "transactionCancelled()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9PaymobSDK0A11SDKDelegateP20transactionCancelledyyF",
+            "mangledName": "$s9PaymobSDK0A11SDKDelegateP20transactionCancelledyyF",
+            "moduleName": "PaymobSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : PaymobSDK.PaymobSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : PaymobSDK.PaymobSDKDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -34675,26 +34699,6 @@
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PaymobSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Sentry",
-        "printedName": "Sentry",
-        "declKind": "Import",
-        "moduleName": "PaymobSDK",
-        "declAttributes": [
-          "ImplementationOnly"
         ]
       },
       {
@@ -48688,28 +48692,28 @@
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/NativeExperience\/NativeExpView\/PaymobCheckoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8929,
+      "offset": 8839,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/NativeExperience\/NativeExpView\/PaymobCheckoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 8956,
+      "offset": 8866,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/NativeExperience\/NativeExpView\/PaymobCheckoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9009,
+      "offset": 8919,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/Scenes\/NativeExperience\/NativeExpView\/PaymobCheckoutView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9039,
+      "offset": 8949,
       "length": 5,
       "value": "false"
     },
@@ -55317,7 +55321,7 @@
     {
       "filePath": "\/Users\/mahmoudyousef\/Desktop\/IOS_Projects\/paymobsdk-ios\/PaymobSDK\/SDK Files\/PaymobSDKDelegate.swift",
       "kind": "StringLiteral",
-      "offset": 651,
+      "offset": 773,
       "length": 2,
       "value": "\"\""
     },

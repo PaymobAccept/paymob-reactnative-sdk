@@ -101,6 +101,13 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
       emitEvent(eventName: "onTransactionStatus", params: params)
   }
 
+ public func transactionCancelled() {
+      // Handle transaction cancellation
+      print("Transaction Cancelled")
+      let params: [String: Any] = ["status": "Cancelled"]
+      emitEvent(eventName: "onTransactionStatus", params: params)
+  }
+
  public func transactionAccepted(transactionDetails: [String: Any]) {
       // Handle transaction acceptance
       print("Transaction Accepted")

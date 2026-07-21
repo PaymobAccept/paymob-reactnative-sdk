@@ -29,12 +29,12 @@ class PaymobCheckoutWrapper(context: Context) : FrameLayout(context) {
                 MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED)
             )
             layout(left, top, right, bottom)
-            
+
             val child = getChildAt(0)
             if (child != null) {
                 val measuredWidth = child.measuredWidth
                 val measuredHeight = child.measuredHeight
-                
+
                 // Synchronize with React Shadow Tree / Yoga
                 (context as? ReactContext)?.runOnNativeModulesQueueThread {
                     val reactContext = context as? ReactContext ?: return@runOnNativeModulesQueueThread
@@ -68,6 +68,7 @@ class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
         return MapBuilder.builder<String, Any>()
             .put("onSuccess", MapBuilder.of("registrationName", "onSuccess"))
             .put("onFailure", MapBuilder.of("registrationName", "onFailure"))
+            .put("onCancelled", MapBuilder.of("registrationName", "onCancelled"))
             .put("onPending", MapBuilder.of("registrationName", "onPending"))
             .build()
     }
@@ -78,15 +79,15 @@ class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
 
         if (commandId == "configure" && args != null) {
             val configMap = args.getMap(0) ?: return
-            
+
             // Extract Configuration
             val publicKey = if (configMap.hasKey("publicKey")) configMap.getString("publicKey") else ""
             val clientSecret = if (configMap.hasKey("clientSecret")) configMap.getString("clientSecret") else ""
             val uiCustomization = if (configMap.hasKey("uiCustomization")) configMap.getString("uiCustomization") else null
-            
+
             val showAddNewCard = if (configMap.hasKey("showAddNewCard")) configMap.getBoolean("showAddNewCard") else true
             val showSaveCard = if (configMap.hasKey("showSaveCard")) configMap.getBoolean("showSaveCard") else true // Assuming true as default fallback
-            val saveCardByDefault = if (configMap.hasKey("saveCardByDefault")) configMap.getBoolean("saveCardByDefault") else true 
+            val saveCardByDefault = if (configMap.hasKey("saveCardByDefault")) configMap.getBoolean("saveCardByDefault") else true
             val payFromOutside = if (configMap.hasKey("payFromOutside")) configMap.getBoolean("payFromOutside") else false
 
             // Get Activity
@@ -94,7 +95,7 @@ class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
             val activity = context?.currentActivity as? ComponentActivity
 
             if (activity != null && publicKey != null && clientSecret != null) {
-                
+
                 // Configure View
                 checkoutView.configure(
                     activity = activity,
@@ -113,11 +114,16 @@ class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
                                 .receiveEvent(root.id, "onSuccess", eventArgs)
                         }
 
-                        override fun onFailure(msg: String?) {
+                        override fun onFailure(msg: String) {
                             val eventArgs = Arguments.createMap()
                             eventArgs.putString("error", msg)
                             context.getJSModule(RCTEventEmitter::class.java)
                                 .receiveEvent(root.id, "onFailure", eventArgs)
+                        }
+
+                        override fun onCancelled() {
+                            context.getJSModule(RCTEventEmitter::class.java)
+                                .receiveEvent(root.id, "onCancelled", Arguments.createMap())
                         }
 
                         override fun onPending() {
@@ -131,7 +137,7 @@ class PaymobCheckoutViewManager : SimpleViewManager<FrameLayout>() {
              val configMap = args.getMap(0) ?: return
              val publicKey = if (configMap.hasKey("publicKey")) configMap.getString("publicKey") else ""
              val clientSecret = if (configMap.hasKey("clientSecret")) configMap.getString("clientSecret") else ""
-             
+
              if (publicKey != null && clientSecret != null) {
                  checkoutView.setPaymentKeys(publicKey, clientSecret)
              }

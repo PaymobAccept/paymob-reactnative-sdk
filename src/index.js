@@ -124,6 +124,7 @@ const Paymob = {
 export const PaymentStatus = {
   SUCCESS: 'Success',
   FAIL: 'Fail',
+  CANCELLED: 'Cancelled',
   PENDING: 'Pending',
 };
 

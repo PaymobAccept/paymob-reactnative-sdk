@@ -750,6 +750,7 @@ public protocol PaymobSDKDelegate : AnyObject {
   func transactionRejected(message: Swift.String)
   func transactionAccepted(transactionDetails: [Swift.String : Any])
   func transactionPending()
+  func transactionCancelled()
 }
 public enum FPNCountryCode : Swift.String {
   case AF

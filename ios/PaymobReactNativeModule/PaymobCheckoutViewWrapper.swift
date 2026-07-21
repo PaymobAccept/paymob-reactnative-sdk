@@ -10,6 +10,7 @@ public class PaymobCheckoutViewWrapper: UIView, PaymobSDKDelegate {
   // MARK: - React Native Props
   @objc var onSuccess: RCTDirectEventBlock?
   @objc var onFailure: RCTDirectEventBlock?
+  @objc var onCancelled: RCTDirectEventBlock?
   @objc var onPending: RCTDirectEventBlock?
   // MARK: - Manager Reference
   weak var viewManager: PaymobCheckoutViewManager?
@@ -50,11 +51,11 @@ public class PaymobCheckoutViewWrapper: UIView, PaymobSDKDelegate {
       checkoutView.leadingAnchor.constraint(equalTo: leadingAnchor),
       checkoutView.trailingAnchor.constraint(equalTo: trailingAnchor),
     ])
-    
+
     layer.shouldRasterize = false
     checkoutView.layer.shouldRasterize = false
   }
-  
+
   private func bindHeightChanges() {
     checkoutView.onHeightChanged = { [weak self] height in
       guard let self,
@@ -96,7 +97,7 @@ public class PaymobCheckoutViewWrapper: UIView, PaymobSDKDelegate {
 
 
   // MARK: - Configuration Methods
-  
+
   func configure(_ config: NSDictionary) {
     let uiCustomization = config["uiCustomization"] as? String
     let showAddNewCard = config["showAddNewCard"] as? Bool ?? true
@@ -119,7 +120,7 @@ public class PaymobCheckoutViewWrapper: UIView, PaymobSDKDelegate {
     checkoutView.setPaymentKeys(publicKey: publicKey, clientSecret: clientSecret)
   }
   // MARK: - PaymobSDKDelegate
-  
+
   public func transactionAccepted(transactionDetails: [String : Any]) {
     onSuccess?(transactionDetails)
   }
@@ -128,10 +129,14 @@ public class PaymobCheckoutViewWrapper: UIView, PaymobSDKDelegate {
     onFailure?(["error": message])
   }
 
+  public func transactionCancelled() {
+    onCancelled?([:])
+  }
+
   public func transactionPending() {
     onPending?([:])
   }
-  
+
   // MARK: - Cleanup
   deinit {
     checkoutView.delegate = nil

@@ -6,6 +6,7 @@ declare module 'paymob-reactnative' {
   export enum PaymentStatus {
     SUCCESS = 'Success',
     FAIL = 'Fail',
+    CANCELLED = 'Cancelled',
     PENDING = 'Pending',
   }
 
