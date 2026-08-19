@@ -12,6 +12,7 @@ RCT_EXTERN_METHOD(setSaveCardDefault:(BOOL)isChecked)
 RCT_EXTERN_METHOD(setShowSaveCard:(BOOL)isVisible)
 RCT_EXTERN_METHOD(setShowConfirmationPage:(BOOL)isVisible)
 RCT_EXTERN_METHOD(setShowTransactionResult:(BOOL)isVisible)
+RCT_EXTERN_METHOD(setFailureCallbackVersion:(NSString *)version)
 RCT_EXTERN_METHOD(setKeyboardHandlingEnabled:(BOOL)isEnabled)
 RCT_EXTERN_METHOD(presentPayVC:(NSString *)clientSecret
                   publicKey:(NSString *)publicKey)

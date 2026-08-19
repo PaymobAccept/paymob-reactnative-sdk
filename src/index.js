@@ -90,6 +90,13 @@ const Paymob = {
     PaymobReactnative.setKeyboardHandlingEnabled(isEnabled);
   },
   /**
+   * Sets the failure callback version used by the native SDK.
+   * Accepts values like "V1", "V2" (case-insensitive).
+   */
+  setFailureCallbackVersion(version) {
+    PaymobReactnative.setFailureCallbackVersion(version);
+  },
+  /**
    * Presents the payment view controller.
    * @param {string} clientSecret - The client secret.
    * @param {string} publicKey - The public key.
@@ -126,6 +133,12 @@ export const PaymentStatus = {
   FAIL: 'Fail',
   CANCELLED: 'Cancelled',
   PENDING: 'Pending',
+};
+
+// Enum-like object to mirror native FailureCallBackVersion values for JS usage
+export const FailureCallBackVersion = {
+  V1: 'V1',
+  V2: 'V2',
 };
 
 export default Paymob;

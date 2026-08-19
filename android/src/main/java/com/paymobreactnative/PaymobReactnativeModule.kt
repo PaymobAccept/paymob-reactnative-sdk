@@ -10,6 +10,7 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
 import com.paymob.paymob_sdk.PaymobSdk
+import com.paymob.paymob_sdk.FailureCallBackVersion
 import com.paymob.paymob_sdk.domain.model.CreditCard
 import com.paymob.paymob_sdk.domain.model.SavedCard
 import com.paymob.paymob_sdk.ui.PaymobSdkListener
@@ -26,6 +27,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
   private var showSaveCard: Boolean? = null
   private var showResultsPage: Boolean? = null
   private var showTransactionResult: Boolean? = null
+  private var failureCallBackVersion: FailureCallBackVersion? = null
 
   override fun getName(): String {
     return "PaymobReactnative"
@@ -121,6 +123,15 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
   }
 
   /**
+   * Sets the failure callback version used by the native SDK.
+   * Accepts values like "V1", "V2" (case-insensitive).
+   */
+  @ReactMethod
+  fun setFailureCallbackVersion(version: String) {
+    failureCallBackVersion = if (version.equals("v2", true)) FailureCallBackVersion.V2 else FailureCallBackVersion.V1
+  }
+
+  /**
    * Presents the payment view controller with the specified parameters.
    *
    * @param clientSecret The client secret provided by Paymob.
@@ -144,6 +155,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
       showSaveCard?.let { showSaveCard(it) }
       showResultsPage?.let { showResultPage(it) }
       showTransactionResult?.let { showTransactionResult(it) }
+      failureCallBackVersion?.let { setFailureCallbackVersion(it) }
     }.build().start()
   }
 
@@ -167,7 +179,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
    * Called when the payment process fails.
    */
   override fun onFailure(msg: String) {
-    emitTransactionStatus("Fail")
+    emitTransactionStatus("Fail", failureMessage = msg)
   }
 
   /**
@@ -199,7 +211,7 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
    * @param status The status of the transaction.
    * @param payResponse A map containing the payment response data (optional).
    */
-  private fun emitTransactionStatus(status: String, payResponse: HashMap<String, String?>? = null) {
+  private fun emitTransactionStatus(status: String, payResponse: HashMap<String, String?>? = null, failureMessage: String? = null) {
     // Create a WritableMap to send to React Native
     val statusMap: WritableMap = Arguments.createMap()
 
@@ -216,6 +228,9 @@ class PaymobReactnativeModule(reactContext: ReactApplicationContext) :
     } else {
       // If no payResponse, we can still send a null or empty details map
       statusMap.putMap("details", Arguments.createMap())
+    }
+    if (failureMessage != null) {
+      statusMap.putString("message", failureMessage)
     }
 
     // Send the event with both status and details

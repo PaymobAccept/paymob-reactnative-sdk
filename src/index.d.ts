@@ -10,6 +10,11 @@ declare module 'paymob-reactnative' {
     PENDING = 'Pending',
   }
 
+  export enum FailureCallBackVersion {
+    V1 = 'V1',
+    V2 = 'V2',
+  }
+
   export type PaymentResponse = {
     status: PaymentResult; // Enum type for status
     details?: object; // Optional property of type 'object'
@@ -25,6 +30,7 @@ declare module 'paymob-reactnative' {
     setShowConfirmationPage(isVisible: boolean): void;
     setShowTransactionResult(isVisible: boolean): void;
     setKeyboardHandlingEnabled(isEnabled: boolean): void;
+    setFailureCallbackVersion(version: FailureCallBackVersion): void;
     presentPayVC(clientSecret: string, publicKey: string): void;
     setSdkListener(listener: PaymobListener): void;
     removeSdkListener(): void;
