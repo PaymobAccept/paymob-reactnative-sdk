@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import Paymob, {
   PaymentStatus,
+  FailureCallBackVersion,
   type PaymentResponse,
 } from 'paymob-reactnative';
 import PaymobEmbeddedView from './PaymobEmbeddedView';
@@ -38,12 +39,12 @@ export default function App() {
       switch (response.status) {
         case PaymentStatus.SUCCESS:
           requestAnimationFrame(() => {
-            Alert.alert('Payment result', PaymentStatus.SUCCESS);
+            Alert.alert(PaymentStatus.SUCCESS, (response.details || 'Unknown'));
           });
           break;
         case PaymentStatus.FAIL:
           requestAnimationFrame(() => {
-            Alert.alert('Payment result', PaymentStatus.FAIL);
+            Alert.alert(PaymentStatus.FAIL , (response.message || 'Unknown'));
           });
           break;
         case PaymentStatus.CANCELLED:
@@ -225,8 +226,9 @@ export default function App() {
 
         <Button
           onPress={() => {
+            Paymob.setFailureCallbackVersion(FailureCallBackVersion.V2);
             Paymob.presentPayVC(
-              'egy_csk_test_470ff99341ee584adf6ee587f7d199be',
+              'egy_csk_test_1ac79060ceabcf1fef3fea70d136cb42',
               'egy_pk_test_huLoawdiICfwok1UVzEvQ4R3OajoyI1b'
             );
           }}

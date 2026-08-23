@@ -17,6 +17,7 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
     private var showConfirmationPage: Bool? = nil
     private var showTransactionResult: Bool? = nil
     private var isKeyboardHandlingEnabled: Bool? = nil
+    private var failureCallBackVersion: FailureCallBackVersion? = nil
 
     // MARK: - React Native Module
     override static func moduleName() -> String {
@@ -77,6 +78,15 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
     }
 
     @objc
+    func setFailureCallbackVersion(_ version: String) {
+        if version.lowercased() == "v2" {
+            failureCallBackVersion = .V2
+        } else {
+            failureCallBackVersion = .V1
+        }
+    }
+
+    @objc
     func presentPayVC(_ clientSecret: String, publicKey: String) {
         paymob.delegate = self
 
@@ -97,7 +107,7 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
  public func transactionRejected(message: String) {
       // Handle transaction rejection
       print("Transaction Rejected")
-      let params: [String: Any] = ["status": "Fail"]
+      let params: [String: Any] = ["status": "Fail", "message": message]
       emitEvent(eventName: "onTransactionStatus", params: params)
   }
 
@@ -148,12 +158,16 @@ class PaymobReactnative: RCTEventEmitter, PaymobSDKDelegate {
             paymob.paymobSDKCustomization.saveCardDefault = saveCardDefault
         }
 
-      if let showConfirmationPage = self.showConfirmationPage {
-        paymob.paymobSDKCustomization.showConfirmationPage = showConfirmationPage
-      }
+        if let showConfirmationPage = self.showConfirmationPage {
+            paymob.paymobSDKCustomization.showConfirmationPage = showConfirmationPage
+        }
 
         if let showTransactionResult = self.showTransactionResult {
             paymob.paymobSDKCustomization.showTransactionResult = showTransactionResult
+        }
+
+        if let failureVersion = self.failureCallBackVersion {
+                paymob.paymobSDKCustomization.setFailureCallBackVersion = failureCallBackVersion
         }
 
         if let isKeyboardHandlingEnabled = self.isKeyboardHandlingEnabled {
