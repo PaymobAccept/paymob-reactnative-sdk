@@ -1,8 +1,8 @@
 # Paymob for React Native
 
-Paymob runs millions of transactions for different business sizes across the Middle East and Africa. Start using Paymob’s solutions and API’s to accept and send payments for your online business now.
+Paymob runs millions of transactions for different business sizes across the Middle East and Africa. Start using Paymob's solutions and API's to accept and send payments for your online business now.
 
-To learn more about Paymob’s offerings and capabilities, visit [Paymob.com](https://www.paymob.com).
+To learn more about Paymob's offerings and capabilities, visit [Paymob.com](https://www.paymob.com).
 
 ## Installation
 
@@ -57,6 +57,84 @@ To get started with the `paymob-reactnative` package, follow these steps:
       buildFeatures { dataBinding = true }
   }
   ```
+
+### Expo Support
+
+If you're using Expo, follow these platform-specific setup instructions:
+
+#### iOS
+No additional steps are required for iOS.
+
+#### Android
+For Android, you'll need to make two configuration changes:
+
+1. Create a file `plugins/withDataBinding.js` with the following content:
+
+```javascript
+const { withAppBuildGradle } = require("expo/config-plugins");
+
+const withDataBinding = (config) => {
+  return withAppBuildGradle(config, (mod) => {
+    if (mod.modResults.language !== "groovy") {
+      throw new Error("Android build.gradle is not using Groovy");
+    }
+
+    if (!mod.modResults.contents.includes("dataBinding true")) {
+      const buildFeaturesPattern = /buildFeatures\s*{\s*([^}]*?)\s*}/g;
+      
+      if (mod.modResults.contents.match(buildFeaturesPattern)) {
+        mod.modResults.contents = mod.modResults.contents.replace(
+          buildFeaturesPattern,
+          (match, existingSettings) => `buildFeatures {
+              ${existingSettings.trim()}
+              dataBinding true
+          }`
+        );
+      } else {
+        mod.modResults.contents = mod.modResults.contents.replace(
+          /android\s*{/,
+          `android {
+              buildFeatures {
+                  dataBinding true
+              }`
+        );
+      }
+    }
+    return mod;
+  });
+};
+
+module.exports = withDataBinding;
+```
+
+2. Install the required Expo build properties package and update your `app.json`:
+
+First, install the package:
+```bash
+npx expo install expo-build-properties
+```
+
+Then update your `app.json`:
+```json
+{
+  "expo": {
+    "plugins": [
+      "./plugins/withDataBinding",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": [
+              "https://jitpack.io",
+              "../node_modules/paymob-reactnative/android/libs"
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}
+```
 
 ## Using Paymob
 
@@ -128,7 +206,7 @@ Paymob.presentPayVC('CLIENT_SECRET', 'PUBLIC_KEY', savedBankCards);
 
 This function call opens the Paymob payment interface, allowing users to complete their transactions securely. Make sure to replace `'CLIENT_SECRET'` and `'PUBLIC_KEY'` with your actual credentials.
 
-Here’s the updated explanation with a revised first sentence and the inclusion of the repository cloning step:
+Here's the updated explanation with a revised first sentence and the inclusion of the repository cloning step:
 
 ## Example App
 
