@@ -114,6 +114,10 @@ public class PaymobCheckoutViewWrapper: UIView, PaymobSDKDelegate {
     )
   }
 
+   func payFromOutside() {
+    checkoutView.payFromOutside()
+  }
+
   func setPaymentKeys(_ keys: NSDictionary) {
     let publicKey = keys["publicKey"] as? String ?? ""
     let clientSecret = keys["clientSecret"] as? String ?? ""

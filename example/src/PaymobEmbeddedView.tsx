@@ -34,10 +34,12 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
     const nativeViewRef = useRef<any>(null);
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<string>('');
+    const [keysLoaded, setKeysLoaded] = useState(false);
+
 
     // Secrets (In real app, fetch these securely)
-    const publicKey = 'egy_pk_test_huLoawdiICfwok1UVzEvQ4R3OajoyI1b';
-    const clientSecret = 'egy_csk_test_fa21fc3c29bdfe3fac232f2e2f520b4c';
+    const publicKey = 'egy_pk_test_xxxxx';
+    const clientSecret = 'egy_csk_test_xxxxx';
 
     // 1. Initial Configure (Settings only)
     useEffect(() => {
@@ -46,7 +48,7 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
                 showAddNewCard: true,
                 showSaveCard: true,
                 saveCardByDefault: false,
-                payFromOutside: false,
+                payFromOutside: true,
             };
 
             const handle = findNodeHandle(nativeViewRef.current);
@@ -69,10 +71,20 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
                     clientSecret
                 };
                 dispatchCommand(handle as number, 'setPaymentKeys', [keysConfig]);
+                setKeysLoaded(true);
             }
         }
     };
 
+    const handleExternalPay = () => {
+        if (nativeViewRef.current) {
+            setStatus('Submitting Payment...');
+            const handle = findNodeHandle(nativeViewRef.current);
+            if (handle) {
+                dispatchCommand(handle as number, 'payFromOutside', []);
+            }
+        }
+    };
     const dispatchCommand = (handle: number, commandId: string, args: any[]) => {
         UIManager.dispatchViewManagerCommand(handle, commandId, args);
 
@@ -130,6 +142,11 @@ export default function PaymobEmbeddedView({ onBack }: PaymobEmbeddedViewProps) 
             <View style={styles.footer}>
                 <View style={styles.buttonContainer}>
                     <Button title="Pay / Load Keys" onPress={handlePay} color="#6200EE" />
+                </View>
+                <View style={{ height: 10 }} />
+                <View style={styles.buttonContainer}>
+                    <Button title="Submit Payment" onPress={handleExternalPay} color="#03A9F4"
+                    disabled={!keysLoaded} />
                 </View>
                 <View style={{ height: 10 }} />
                 <View style={styles.buttonContainer}>

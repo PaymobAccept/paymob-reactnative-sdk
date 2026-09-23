@@ -14,4 +14,7 @@ RCT_EXTERN_METHOD(configure:(nonnull NSNumber *)node
 RCT_EXTERN_METHOD(setPaymentKeys:(nonnull NSNumber *)node
                   keys:(NSDictionary *)keys)
 
+RCT_EXTERN_METHOD(payFromOutside:(nonnull NSNumber *)node)
+
+
 @end

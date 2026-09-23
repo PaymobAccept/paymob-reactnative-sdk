@@ -42,6 +42,16 @@ class PaymobCheckoutViewManager: RCTViewManager {
       wrapper.setPaymentKeys(keys)
     }
   }
+
+    @objc func payFromOutside(_ node: NSNumber) {
+    DispatchQueue.main.async { [weak self] in
+      guard let self else { return }
+      guard let wrapper = self.bridge.uiManager.view(forReactTag: node) as? PaymobCheckoutViewWrapper else {
+        return
+      }
+      wrapper.payFromOutside()
+    }
+  }
   
   func updateHeight(_ height: CGFloat, forTag reactTag: NSNumber) {
     guard let bridge = self.bridge else { return }
